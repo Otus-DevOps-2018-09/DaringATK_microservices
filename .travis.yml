@@ -2,5 +2,9 @@ dist: trusty
 sudo: required
 language: bash
 before_install:
- - curl https://raw.githubusercontent.com/express42/otus-homeworks/2018-09/run.sh | bash 
-
+- curl https://raw.githubusercontent.com/express42/otus-homeworks/2018-09/run.sh |
+  bash
+notifications:
+  slack:
+    rooms:
+      secure: WwTbrgVpqIsFTdYYdt+eUYPIClWKD6kyN4F00MLhcC7ACn/rjsteII4Q72BV3mJmM27ses2mqbXgg8khGEWWXlUb3yYp6zj+4chRlDl7fdFpZZjWe3j3b6IJHagakCc1thoqZKWSq2k+YMyRHPOqIstk8UTzb1bw6Zn/wPszVs5qnXqeXpmVJKQUCQHWxcmOu8QJL5Rw9snkLmTV/HP9eX7lcThAzm7iX9kBdBJV2R7v9rj8qDr2b1JWJQxk0HEZX36kUYuTsEHDIP8xn3PcjRblbeoZwy0kV/VNjQsyFEuqNCYstkct4FwcWoebenvqi8FUcphuugsDc1MlFAv2zGh73QA1yG5EIXBs9s3NYDLsJ4P4k2uDsPMcS4y0oinTlOi33avBiMATz90DfhLMUecPdVW+BTV3VHD26mfA3Ox6HWkpPVsS8+IyUwRAr9tcDZexL/UGIftoPtIetm/Z+TjP8yOmer+4VY3LupFgsSQ0IC967MCrbjW8Ah7fbuQjj2zP9wpz0VhiqLcbTNEqjrnEFzfvVCMqvvrtHylIRCM4q753CAvp9JvjV6IsqQzPaaby0QjtRDZ8jJWzN2TJH1bDp5FrXU41/0GPCm/D7/YmZ4t4Zltfq9C6MfkrAxUh/QAAOlaZTp2AAFJg8sgtoVEGwUdiTZ+g/xPcNlgQOIs=
