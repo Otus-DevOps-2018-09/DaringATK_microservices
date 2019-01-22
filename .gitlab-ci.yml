@@ -18,6 +18,8 @@ build_job:
   stage: build
   script:
     - echo 'Building'
+  tags:
+    - docker
 
 test_unit_job:
  stage: test
@@ -25,11 +27,15 @@ test_unit_job:
  - mongo:latest
  script:
  - ruby simpletest.rb 
+  tags:
+    - docker
 
 test_integration_job:
   stage: test
   script:
     - echo 'Testing 2'
+  tags:
+    - docker
 
 deploy_dev_job:
   stage: review
@@ -38,6 +44,8 @@ deploy_dev_job:
   environment:
     name: dev
     url: http://dev.homework.com
+  tags:
+    - docker
 
 branch review:
   stage: review
@@ -49,6 +57,8 @@ branch review:
     - branches
   except:
     - master
+  tags:
+    - docker
 
 staging:
   stage: stage
@@ -60,6 +70,8 @@ staging:
   environment:
     name: stage
     url: https://demo.homework.com
+  tags:
+    - docker
 
 production:
   stage: production
@@ -71,3 +83,5 @@ production:
   environment:
     name: production
     url: https://homework.com
+  tags:
+    - docker
