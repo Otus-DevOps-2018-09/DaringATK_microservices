@@ -85,4 +85,7 @@ production:
     url: https://homework.com
   tags:
     - docker
+<<<<<<< HEAD
 
+=======
+>>>>>>> be2aead64b40396c502be5a74d31ed8b4d2b182d
