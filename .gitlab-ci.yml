@@ -22,11 +22,11 @@ build_job:
     - docker
 
 test_unit_job:
- stage: test
- services:
- - mongo:latest
- script:
- - ruby simpletest.rb 
+  stage: test
+  services:
+    - mongo:latest
+  script:
+    - ruby simpletest.rb 
   tags:
     - docker
 
