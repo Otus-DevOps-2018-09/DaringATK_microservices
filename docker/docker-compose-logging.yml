@@ -32,3 +32,4 @@ networks:
     name: front_net
   back_net:
     name: front_net
+    
