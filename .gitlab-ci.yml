@@ -6,6 +6,8 @@ stages:
   - review
   - stage
   - production
+  - deploy
+
 
 variables:
  DATABASE_URL: 'mongodb://mongo/user_posts'
@@ -13,7 +15,6 @@ variables:
 before_script:
  - cd reddit
  - bundle install 
-
 build_job:
   stage: build
   script:
@@ -29,6 +30,23 @@ test_unit_job:
     - ruby simpletest.rb 
   tags:
     - docker
+
+test_unit_job:
+  stage: test
+  script:
+    - echo 'Testing 1'
+  tags:
+    - docker
+
+test_unit_job:
+ stage: test
+ services:
+   - mongo:latest
+ script:
+   - ruby simpletest.rb 
+ tags:
+   - docker
+
 
 test_integration_job:
   stage: test
@@ -85,7 +103,11 @@ production:
     url: https://homework.com
   tags:
     - docker
-<<<<<<< HEAD
 
-=======
->>>>>>> be2aead64b40396c502be5a74d31ed8b4d2b182d
+deploy_job:
+  stage: deploy
+  script:
+    - echo 'Deploy'
+  tags:
+    - docker
+
